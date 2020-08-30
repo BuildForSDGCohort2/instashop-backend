@@ -1,0 +1,35 @@
+extend type Mutation {
+    createCompany(input: CompanyInput! @spread): Company @create
+    updateCompany(id: ID!,input: CompanyInput! @spread): Company @update
+    deleteCompany(id: ID!): Company @delete
+}
+
+extend type Query {
+    companies: [Company!]! @all
+    company(id: ID @eq): Company @find
+}
+
+type Company {
+    id: ID!
+    name: String!
+    address: String!
+    registration_id: String!
+    website: String
+    fax: String
+    phone: String!
+    verified_at: DateTime
+    manager: User @belongsTo 
+    created_at: DateTime!
+    updated_at: DateTime!
+}
+
+input CompanyInput {
+    name: String!
+    address: String!
+    registration_id: String!
+    website: String
+    fax: String
+    phone: String!
+    verified_at: DateTime
+    manager_id: ID
+}
