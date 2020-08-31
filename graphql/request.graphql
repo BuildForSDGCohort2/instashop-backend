@@ -25,5 +25,5 @@ input RequestInput {
     title: String!
     price: Float!
     description: String!
-    supplier_id: ID!
+     buyer_id: ID!
 }
