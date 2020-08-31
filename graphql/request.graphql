@@ -1,6 +1,6 @@
 extend type Mutation {
     createRequest(input: RequestInput! @spread): Request @create
-    updateRequest(id: ID!,input: ProductInput! @spread): Product @update
+    updateRequest(id: ID!,input: RequestInput! @spread): Request @update
     deleteRequest(id: ID!): Request @delete
 }
 
@@ -23,7 +23,9 @@ type Request {
 
 input RequestInput {
     title: String!
-    price: Float!
+    quantity: Float!
+    delivery_time: Date!
+    budget: Float!
     description: String!
     buyer_id: ID!
 }

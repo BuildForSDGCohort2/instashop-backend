@@ -9,6 +9,8 @@ type User {
     email: String!
     campany: Company @hasOne
     products: [Product!] @hasMany
+    requests: [Request!] @hasMany
+    offers: [Offer!] @hasMany
     created_at: DateTime!
     updated_at: DateTime!
 }
