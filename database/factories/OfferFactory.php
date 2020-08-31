@@ -18,8 +18,8 @@ use Illuminate\Support\Str;
 |
 */
 
-$factory->define(Model::class, function (Faker $faker) {
-    
+$factory->define(Offer::class, function (Faker $faker) {
+
     return [
         'description' => $faker->randomHtml(3,2),
         'delivery_time' => $faker->date('31-08-2020'),
