@@ -18,11 +18,7 @@ use Illuminate\Support\Str;
 */
 
 $factory->define(Request::class, function (Faker $faker) {
-<<<<<<< HEAD
   
-=======
-    
->>>>>>> 75f001f4f9955d05d3aab7cd0defe620ed928d24
     return [
         'title' => $faker->text(20),
         'quantity' => $faker->float(999999.99),

@@ -25,10 +25,5 @@ input RequestInput {
     title: String!
     price: Float!
     description: String!
-<<<<<<< HEAD
     buyer_id: ID!
 }
-=======
-     buyer_id: ID!
-}
->>>>>>> 75f001f4f9955d05d3aab7cd0defe620ed928d24

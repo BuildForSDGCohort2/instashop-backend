@@ -44,14 +44,8 @@ class User extends Authenticatable
     public function products()
     {
         return $this->hasMany(Product::class, "supplier_id");
-<<<<<<< HEAD
     }
     public function request()
-=======
-
-    }
-    public function requests()
->>>>>>> 75f001f4f9955d05d3aab7cd0defe620ed928d24
     {
         return $this->hasMany(Request::class, "buyer_id");
     }
