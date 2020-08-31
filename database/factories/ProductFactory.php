@@ -2,7 +2,7 @@
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
-use App\Request;
+use App\Product;
 use Faker\Generator as Faker;
 use Illuminate\Support\Str;
 
@@ -17,18 +17,13 @@ use Illuminate\Support\Str;
 |
 */
 
-$factory->define(Request::class, function (Faker $faker) {
-<<<<<<< HEAD
-  
-=======
-    
->>>>>>> 75f001f4f9955d05d3aab7cd0defe620ed928d24
+$factory->define(Product::class, function (Faker $faker) {
+    $phoneFax = $faker->e164PhoneNumber;
+    $company = $faker->unique()->catchPhrase;
     return [
         'title' => $faker->text(20),
-        'quantity' => $faker->float(999999.99),
-        'delivery_time' => $faker->date('31-08-2020'),
-        'budget' => $faker->float(4000),
+        'price' => $faker->randomFloat(2, 0, 999999.99),
         'description' => $faker->randomHtml(3,2),
-        'buyer_id' => factory('App\User')->create()->id
+        'supplier_id' => factory('App\User')->create()->id
     ];
 });
