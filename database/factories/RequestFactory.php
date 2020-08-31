@@ -18,8 +18,7 @@ use Illuminate\Support\Str;
 */
 
 $factory->define(Request::class, function (Faker $faker) {
-    $phoneFax = $faker->e164PhoneNumber;
-    $company = $faker->unique()->catchPhrase;
+    
     return [
         'title' => $faker->text(20),
         'quantity' => $faker->float(999999.99),
