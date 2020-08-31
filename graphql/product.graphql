@@ -1,0 +1,27 @@
+extend type Mutation {
+    createProduct(input: ProductInput! @spread): Product @create
+    updateProduct(id: ID!,input: ProductInput! @spread): Product @update
+    deleteProduct(id: ID!): Product @delete
+}
+
+extend type Query {
+    products: [Product!]! @paginate(defaultCount: 10)
+    product(id: ID @eq): Product @find
+}
+
+type Product {
+    id: ID!
+    title: String!
+    price: Float!
+    description: String!
+    supplier: User! @belongsTo 
+    created_at: DateTime!
+    updated_at: DateTime!
+}
+
+input ProductInput {
+    title: String!
+    price: Float!
+    description: String
+    supplier_id: ID!
+}
