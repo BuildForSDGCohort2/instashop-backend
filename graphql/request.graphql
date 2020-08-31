@@ -1,0 +1,29 @@
+extend type Mutation {
+    createRequest(input: RequestInput! @spread): Request @create
+    updateRequest(id: ID!,input: ProductInput! @spread): Product @update
+    deleteRequest(id: ID!): Request @delete
+}
+
+extend type Query {
+    requests: [Request!]! @all
+    request(id: ID @eq): Request @find
+}
+
+type Request {
+    id: ID!
+    title: String!
+    quantity: Float!
+    delivery_time: Date!
+    budget: Float!
+    description: String!
+    buyer: User! @belongsTo 
+    created_at: DateTime!
+    updated_at: DateTime!
+}
+
+input RequestInput {
+    title: String!
+    price: Float!
+    description: String!
+    supplier_id: ID!
+}

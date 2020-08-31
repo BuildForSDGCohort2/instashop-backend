@@ -41,4 +41,8 @@ class User extends Authenticatable
     {
         return $this->hasOne(Company::class, "manager_id");
     }
+    public function buyers()
+    {
+        return $this->hasMany(Request::class, "buyer_id");
+    }
 }
