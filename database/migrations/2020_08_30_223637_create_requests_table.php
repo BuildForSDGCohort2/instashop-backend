@@ -19,7 +19,7 @@ class CreateRequestsTable extends Migration
             $table->float('quantity');
             $table->Date('delivery_time');
             $table->float('budget');
-            $table->string('description')->nullable();
+            $table->text('description')->nullable();
             $table->unsignedBigInteger('buyer_id');
             $table->foreign('buyer_id')->references('id')->on('users');
             $table->timestamps();

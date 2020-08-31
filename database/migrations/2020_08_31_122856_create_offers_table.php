@@ -15,7 +15,7 @@ class CreateOffersTable extends Migration
     {
         Schema::create('offers', function (Blueprint $table) {
             $table->id();
-            $table->string('description')->nullable();
+            $table->text('description')->nullable();
             $table->Date('delivery_time');
             $table->string('valid_from');
             $table->string('valid_to');

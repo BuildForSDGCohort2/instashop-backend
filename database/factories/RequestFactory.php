@@ -21,9 +21,9 @@ $factory->define(Request::class, function (Faker $faker) {
   
     return [
         'title' => $faker->text(20),
-        'quantity' => $faker->float(999999.99),
-        'delivery_time' => $faker->date('31-08-2020'),
-        'budget' => $faker->float(4000),
+        'quantity' => $faker->numberBetween(1, 9000),
+        'delivery_time' => $faker->date('2020-08-31'),
+        'budget' => $faker->randomFloat(2, 0, 999999.99),
         'description' => $faker->randomHtml(3,2),
         'buyer_id' => factory('App\User')->create()->id
     ];
