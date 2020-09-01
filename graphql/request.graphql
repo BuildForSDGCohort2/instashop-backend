@@ -5,7 +5,7 @@ extend type Mutation {
 }
 
 extend type Query {
-    requests: [Request!]! @all
+    requests: [Request!]! @paginate(defaultCount: 10)
     request(id: ID @eq): Request @find
 }
 
@@ -26,6 +26,6 @@ input RequestInput {
     quantity: Float!
     delivery_time: Date!
     budget: Float!
-    description: String!
+    description: String
     buyer_id: ID!
 }

@@ -5,7 +5,7 @@ extend type Mutation {
 }
 
 extend type Query {
-    offers: [Offer!]! @all
+    offers: [Offer!]! @paginate(defaultCount: 10)
     offer(id: ID @eq): Offer @find
 }
 
@@ -22,7 +22,7 @@ type Offer {
 }
 
 input OfferInput {
-    description: String!
+    description: String
     delivery_time: Date!
     valid_from: String!
     valid_to: String!

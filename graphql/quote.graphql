@@ -18,6 +18,6 @@ type Quote {
 }
 
 input QuoteInput {
-    description: String!
+    description: String
     supplier_id: ID!
 }

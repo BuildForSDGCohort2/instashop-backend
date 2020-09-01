@@ -45,15 +45,15 @@ class User extends Authenticatable
     {
         return $this->hasMany(Product::class, "supplier_id");
     }
-    public function request()
+    public function requests()
     {
         return $this->hasMany(Request::class, "buyer_id");
     }
-    public function order()
+    public function offers()
     {
         return $this->hasMany(Order::class, "supplier_id");
     }
-    public function quote()
+    public function quotes()
     {
         return $this->hasMany(Quote::class, "supplier_id");
     }
