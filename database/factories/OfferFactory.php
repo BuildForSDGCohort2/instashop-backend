@@ -22,10 +22,10 @@ $factory->define(Offer::class, function (Faker $faker) {
 
     return [
         'description' => $faker->randomHtml(3,2),
-        'delivery_time' => $faker->date('31-08-2020'),
+        'delivery_time' => $faker->date('2020-08-31'),
         'valid_from' => $faker->text(50),
         'valid_to' => $faker->text(50),
         'status' => $faker->text(50),
-        'supplier_id' => factory('App\User')->create()->id
+        'product_id' => factory('App\Product')->create()->id
     ];
 });
