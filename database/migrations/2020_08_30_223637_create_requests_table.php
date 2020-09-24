@@ -11,7 +11,7 @@ class CreateRequestsTable extends Migration
      *
      * @return void
      */
-    public function up_requests()
+    public function up()
     {
         Schema::create('requests', function (Blueprint $table) {
             $table->id();
