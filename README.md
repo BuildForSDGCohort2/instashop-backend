@@ -9,6 +9,7 @@
 
 ## About Laravel
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/2c4aa96b9bac452498ab166a9ba894bb)](https://app.codacy.com/gh/BuildForSDGCohort2/team-252-group-a-backend?utm_source=github.com&utm_medium=referral&utm_content=BuildForSDGCohort2/team-252-group-a-backend&utm_campaign=Badge_Grade)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/2c4aa96b9bac452498ab166a9ba894bb)](https://app.codacy.com/gh/BuildForSDGCohort2/instashop-backend?utm_source=github.com&utm_medium=referral&utm_content=BuildForSDGCohort2/instashop-backend&utm_campaign=Badge_Grade_Settings)
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
