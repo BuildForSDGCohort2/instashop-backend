@@ -14,10 +14,10 @@ type Company {
     name: String!
     address: String!
     registration_id: String!
-    website: String
-    fax: String
+    website: String!
+    fax: String!
     phone: String!
-    verified_at: DateTime
+    verified_at: DateTime!
     manager: User @belongsTo 
     created_at: DateTime!
     updated_at: DateTime!
@@ -27,9 +27,9 @@ input CompanyInput {
     name: String!
     address: String!
     registration_id: String!
-    website: String
-    fax: String
+    website: String!
+    fax: String!
     phone: String!
-    verified_at: DateTime
-    manager_id: ID
+    verified_at: DateTime!
+    manager_id: ID!
 }

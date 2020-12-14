@@ -1,0 +1,31 @@
+extend type Mutation {
+    createOffer(input: OfferInput! @spread): Offer @create
+    updateOffer(id: ID!,input: OfferInput! @spread): Offer @update
+    deleteOffer(id: ID!): Offer @delete
+}
+
+extend type Query {
+    offers: [Offer!]! @paginate(defaultCount: 10)
+    offer(id: ID @eq): Offer @find
+}
+
+type Offer {
+    id: ID!
+    description: String!
+    delivery_time: Date!
+    valid_from: String!
+    valid_to: String!
+    status: String!
+    supplier: User! @belongsTo 
+    created_at: DateTime!
+    updated_at: DateTime!
+}
+
+input OfferInput {
+    description: String
+    delivery_time: Date!
+    valid_from: String!
+    valid_to: String!
+    status: String!
+    supplier_id: ID!  
+}

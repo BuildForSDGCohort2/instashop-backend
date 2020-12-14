@@ -1,0 +1,23 @@
+extend type Mutation {
+    createQuote(input: QuoteInput! @spread): Quote @create
+    updateQuote(id: ID!,input: QuoteInput! @spread): Quote @update
+    deleteQuote(id: ID!): Quote @delete
+}
+
+extend type Query {
+    quotes: [Quote!]! @all
+    quote(id: ID @eq): Quote @find
+}
+
+type Quote {
+    id: ID!
+    description: String!
+    supplier: User! @belongsTo 
+    created_at: DateTime!
+    updated_at: DateTime!
+}
+
+input QuoteInput {
+    description: String
+    supplier_id: ID!
+}
