@@ -41,9 +41,14 @@ class User extends Authenticatable
     {
         return $this->hasOne(Company::class, "manager_id");
     }
-
     public function products()
     {
         return $this->hasMany(Product::class, "supplier_id");
     }
+    public function request()
+    {
+        return $this->hasMany(Request::class, "buyer_id");
+    }
+
+  
 }
